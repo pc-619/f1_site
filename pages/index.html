@@ -3,30 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/index-style.css">
+    <link rel="stylesheet" href="../styles/keyframes.css">
+    <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
     <title>UWin FSAE</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div>
-            <img src="../images/logo-blue.png">
-            <div id="header_news">
-                test
+            <div id="header-l">
+                <img src="../images/logos/logo.png" height="75">
             </div>
+            
+            <div id="header-r">
+                <nav id="navbar">
+                    <span>Home</span>
+                    <a href="community_support.html">Community Support</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="sponsors.html">Sponsors</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+
+            <!-- <div id="header-r">
+                
+                <div class="news-item">Capital Punishment Returns, Exclusive to MATH-3XXX Instructors Whose Name Starts With 'T'</div>
+                <div class="news-item">New Driver Selected: Daring Web-Dev Stud Wows Team With G-Class-Worthy Skills</div>
+                <div class="news-item">See More</div>
+            </div> -->
         </div>
     </header>
-    <nav>
-        this is the NAVBAR
-    </nav>
+    <!-- <div>
+        this is the HEADER-NOTIFS
+    </div> -->
     <main>
-        this is the MAIN
+        <div class="parallax">
+            <div id="parallax-text">
+                <h1 class="parallaxTextFadeIn">UWindsor FSAE</h1>
+                <h2 class="parallaxTextFadeIn">The UWinning Team</h2>
+            </div>
+        </div>
+        <div id="main-content">
+            <section id="index-sec1">
+                <img src="../images/cars/car1.png" alt="" height="235">
+                <div class="main-text">
+                    <h2>Placeholder Headline #1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
+            </section>
+            <section id="index-sec2">
+                <div class="main-text">
+                    <h2>Placeholder Headline #2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
+                <img src="../images/cars/car2.png" alt="" height="235">
+            </section>
+            <section id="index-sec3">
+                <img src="../images/cars/car3.png" alt="" height="235">
+                <div class="main-text">
+                    <h2>Placeholder Headline #3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
+            </section>
+            <section id="index-sec4">
+                <div class="main-text">
+                    <h2>New Driver Selected: Daring Web-Dev Stud Wows Team With G-Class-Worthy Skills</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
+
+                <div>
+                    <h2>Basic Automatic Slideshow</h2>
+                    <p>hover over picture to halt auto-scroll<br>speed is deliberately quick to showcase transition</p>
+
+                    <div id="slideshow">
+                        
+                        <div id="slideshow-imgs">
+                            <img class="slideshowImgs" src="../images/cars/car4.png" alt="">
+                            <img class="slideshowImgs ssCurrent" src="../images/cars/car5.png" alt="">
+                            <img class="slideshowImgs" src="../images/cars/car6.png" alt="">
+                        </div>
+                        <!-- <button id="ssR" onclick="ssRight()">Next</button> -->
+                        <div id="slideshow-controls">
+                            <img id="ssL" src="../images/misc/left.svg" onclick="ssLeft()">
+                            <img id="ssR" src="../images/misc/right.svg" onclick="ssRight()">
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </section>
+            
+        </div>
     </main>
     <footer>
         <div>
-            <img src="../images/logo-grey.png">
-            <img src="../images/sponsor1.png" alt="">
+            <div id="footer-l">
+                <img src="../images/logos/logo.png">
+                <div id="footer-contact-us">
+                    <h3>Interested?</h3>
+                    <p>Reach out through the form below.<br><br>
+                    
+                        <a href="#">Link to Google Form</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div id="footer-r">
+                <img src="../images/sponsors/sponsor1.png" alt="">
+                <img src="../images/sponsors/sponsor2.png" alt="">
+                <img src="../images/sponsors/sponsor3.png" alt="">
+                <img src="../images/sponsors/sponsor4.png" alt="">
+                <img src="../images/sponsors/sponsor5.png" alt="">
+                <img src="../images/sponsors/sponsor6.png" alt="">
+            </div>
+
         </div>
         
     </footer>
+    <!-- <script src="../js/fade-header.js"></script> -->
+     <script src="../js/slideshow.js"></script>
 </body>
 </html>

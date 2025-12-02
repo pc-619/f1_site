@@ -1,0 +1,79 @@
+@keyframes headerFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes parallaxTextFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes infiniRotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.headerFadeOut {
+    animation: 0.5s headerFadeOut forwards;
+}
+
+.headerFadeIn {
+    animation: 0.5s headerFadeIn forwards;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+    animation: 0.5s fadeOut forwards;
+}
+
+.parallaxTextFadeIn {
+    animation: 0.5s parallaxTextFadeIn forwards;
+}
+
+.infiniRotate {
+    animation: 2s infiniRotate linear infinite;
+}
