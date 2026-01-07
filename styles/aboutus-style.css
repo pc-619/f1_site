@@ -89,10 +89,10 @@ header {
     display: flex;
     justify-content: end;
     align-items: end;
-    background-image: linear-gradient(to right, #0000 0%, #014 60%), url("../images/misc/parallax.png");
-    height: 500px;
+    background-image: linear-gradient(to right, #0000 0%, var(--auwin-davy) 100%), linear-gradient(to bottom, #0000 0%, var(--auwin-davy) 60%), url("../images/media/image-20250914-123934-682abbfe.jpeg");
+    height: 80vh;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -100,10 +100,10 @@ header {
         margin: auto 5vw 2vh auto;
         font-size: 56px;
         text-align: right;
-        stroke-width: 1px;
         color: var(--uwin-yellow);
     }
 }
+
 
 #parallax-text > * {
     margin: 0;

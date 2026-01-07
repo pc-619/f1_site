@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="../styles/keyframes.css">
     <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
     <title>UWin FSAE</title>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
         <div>
             <div id="header-l">
-                <img src="../images/logos/logo.png" height="75">
+                <img src="../images/logos/FE Logo Updated Yellow.png" height="55">
             </div>
             
             <div id="header-r">
@@ -23,74 +28,91 @@
                     <a href="sponsors.html">Sponsors</a>
                     <a href="contact.html">Contact</a>
                 </nav>
+                <div id="sm-navbar-icon">
+                    <img src="../images/misc/menu.svg" alt="" height="32" onclick="SNavMenu()">
+                    
+                </div>
             </div>
-
-            <!-- <div id="header-r">
-                
-                <div class="news-item">Capital Punishment Returns, Exclusive to MATH-3XXX Instructors Whose Name Starts With 'T'</div>
-                <div class="news-item">New Driver Selected: Daring Web-Dev Stud Wows Team With G-Class-Worthy Skills</div>
-                <div class="news-item">See More</div>
-            </div> -->
         </div>
+
     </header>
-    <!-- <div>
-        this is the HEADER-NOTIFS
-    </div> -->
-    <main>
+    <div id="header-notifs">
+        <marquee behavior="scroll" direction="left">This marquee is an experimental feature -- if you want to broadcast minute, crucial headers on your site, this would be one way about it. Other ways include a 'newsbox' aside the screen, a dedicated blog page, etc.</marquee>
+    </div>
+    <div id="sm-navbar" style="visibility: hidden">
+        <span>Home</span>
+        <a href="community_support.html">Community Support</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <main class="indexMain">
         <div class="parallax">
             <div id="parallax-text">
                 <h1 class="parallaxTextFadeIn">UWindsor FSAE</h1>
-                <h2 class="parallaxTextFadeIn">The UWinning Team</h2>
+                <h6 class="parallaxTextFadeIn">An eye-catching slogan.</h6>
             </div>
         </div>
         <div id="main-content">
             <section id="index-sec1">
-                <img src="../images/cars/car1.png" alt="" height="235">
+                <img src="../images/media/image-20250928-153641-3e5cd698.jpeg" alt="">
                 <div class="main-text">
                     <h2>Placeholder Headline #1</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    <a class="learn-more-button" href="aboutus.html">Learn More</a>
                 </div>
             </section>
             <section id="index-sec2">
+                <img src="../images/media/image-20250914-162336-c0958633.jpeg" alt="">
                 <div class="main-text">
                     <h2>Placeholder Headline #2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
                 </div>
-                <img src="../images/cars/car2.png" alt="" height="235">
             </section>
             <section id="index-sec3">
-                <img src="../images/cars/car3.png" alt="" height="235">
-                <div class="main-text">
-                    <h2>Placeholder Headline #3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
-                </div>
-            </section>
-            <section id="index-sec4">
+                <img src="../images/misc/IMG_7255.jpg" alt="">
                 <div class="main-text">
                     <h2>New Driver Selected: Daring Web-Dev Stud Wows Team With G-Class-Worthy Skills</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
                 </div>
-
-                <div>
-                    <h2>Basic Automatic Slideshow</h2>
-                    <p>hover over picture to halt auto-scroll<br>speed is deliberately quick to showcase transition</p>
-
-                    <div id="slideshow">
-                        
-                        <div id="slideshow-imgs">
-                            <img class="slideshowImgs" src="../images/cars/car4.png" alt="">
-                            <img class="slideshowImgs ssCurrent" src="../images/cars/car5.png" alt="">
-                            <img class="slideshowImgs" src="../images/cars/car6.png" alt="">
-                        </div>
-                        <!-- <button id="ssR" onclick="ssRight()">Next</button> -->
+            </section>
+            <section id="index-sec4">
+                <img src="../images/media/DSC05642.jpg" alt="">
+                <div class="main-text">
+                    <h2>Placeholder Headline #3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
+                
+            </section>
+            
+            <section id="index-sec5">
+                <div id="slideshow">
+                    <div id="slideshow-media">
                         <div id="slideshow-controls">
-                            <img id="ssL" src="../images/misc/left.svg" onclick="ssLeft()">
-                            <img id="ssR" src="../images/misc/right.svg" onclick="ssRight()">
+                            <img id="ssL" src="../images/slideshow/controls/left.svg" onclick="slide(-1)">
+                            <img id="ssR" src="../images/slideshow/controls/right.svg" onclick="slide(1)">
                         </div>
-                        
+                        <img class="slideshowImgs ssCurrent" src="../images/slideshow/media/IMG_20250515_113544258.jpg" alt="">
+                        <img class="slideshowImgs" src="../images/slideshow/media/Capture.PNG" alt="">
+                        <img class="slideshowImgs" src="../images/media/image-20240612-074607-40de0191.jpeg" alt="">
+                        <div id="slideshow-progress">
+                            <div class="slideshow-dot activedot">
+                                <div></div>
+                            </div>
+                            <div class="slideshow-dot">
+                                <div></div>
+                            </div>
+                            <div class="slideshow-dot">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="main-text">
+                    <h2>Placeholder Headline #4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                </div>
             </section>
             
         </div>
@@ -98,7 +120,7 @@
     <footer>
         <div>
             <div id="footer-l">
-                <img src="../images/logos/logo.png">
+                <img src="../images/logos/FE Logo Updated Yellow.png" width="200">
                 <div id="footer-contact-us">
                     <h3>Interested?</h3>
                     <p>Reach out through the form below.<br><br>
@@ -109,8 +131,8 @@
             </div>
             
             <div id="footer-r">
-                <img src="../images/sponsors/sponsor1.png" alt="">
-                <img src="../images/sponsors/sponsor2.png" alt="">
+                <img src="../images/sponsors/charge.png" alt="" width="250">
+                <img src="../images/sponsors/uwinengsoc.png" alt="" width="250">
                 <img src="../images/sponsors/sponsor3.png" alt="">
                 <img src="../images/sponsors/sponsor4.png" alt="">
                 <img src="../images/sponsors/sponsor5.png" alt="">
@@ -118,9 +140,10 @@
             </div>
 
         </div>
-        
     </footer>
-    <!-- <script src="../js/fade-header.js"></script> -->
-     <script src="../js/slideshow.js"></script>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/fouc-remedy.js"></script>
+    <script src="../js/SNav.js"></script>
+    <script src="../js/onomatopoeic-click.js"></script>
 </body>
 </html>

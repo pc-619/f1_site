@@ -1,3 +1,21 @@
+@keyframes snavSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes snavSlideUp {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
 @keyframes headerFadeOut {
     from {
         opacity: 1;
@@ -19,9 +37,11 @@
 @keyframes fadeIn {
     from {
         opacity: 0;
+        /* transform: translateX(100%); */
     }
     to {
         opacity: 1;
+        /* transform: translateX(0%); */
     }
 }
 
@@ -31,6 +51,7 @@
     }
     to {
         opacity: 0;
+        display: none;
     }
 }
 
@@ -48,9 +69,11 @@
 @keyframes infiniRotate {
     from {
         transform: rotateY(0deg);
+        filter: sepia(1) hue-rotate(0deg);
     }
     to {
         transform: rotateY(360deg);
+        filter: sepia(10) hue-rotate(360deg);
     }
 }
 
@@ -70,10 +93,27 @@
     animation: 0.5s fadeOut forwards;
 }
 
+.clickFadeOut {
+    animation: 0.5s fadeOut;
+}
+
 .parallaxTextFadeIn {
-    animation: 0.5s parallaxTextFadeIn forwards;
+    animation: 2.5s parallaxTextFadeIn forwards;
 }
 
 .infiniRotate {
-    animation: 2s infiniRotate linear infinite;
+    transition: transform 2s ease-in-out infinite;
+}
+
+.infiniRotate:hover {
+    transform: rotateY(360deg);
+    filter: sepia(10) hue-rotate(360deg);
+}
+
+.snavSlideDown {
+    animation: 0.5s snavSlideDown forwards;
+}
+
+.snavSlideUp {
+    animation: 0.5s snavSlideUp forwards;
 }

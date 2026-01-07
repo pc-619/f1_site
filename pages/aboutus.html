@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/aboutus-style.css">
+    <link rel="stylesheet" href="../styles/index-style.css">
     <link rel="stylesheet" href="../styles/keyframes.css">
     <link rel="icon" href="../images/favicon/favicon.svg" type="image/svg+xml">
     <title>UWin FSAE</title>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
         <div>
             <div id="header-l">
-                <img src="../images/logos/logo.png" height="75">
+                <img src="../images/logos/FE Logo Updated Yellow.png" height="55">
             </div>
             
             <div id="header-r">
@@ -23,6 +28,9 @@
                     <a href="sponsors.html">Sponsors</a>
                     <a href="contact.html">Contact</a>
                 </nav>
+                <div id="sm-navbar-icon">
+                    <img src="../images/misc/menu.svg" alt="" height="32" onclick="SNavMenu()">    
+                </div>
             </div>
 
             <!-- <div id="header-r">
@@ -33,201 +41,144 @@
             </div> -->
         </div>
     </header>
-    <!-- <div>
-        this is the HEADER-NOTIFS
-    </div> -->
-    <main>
-        <div class="parallax">
+    <div id="header-notifs">
+        <marquee behavior="scroll" direction="left">This marquee is an experimental feature -- if you want to broadcast minute, crucial headers on your site, this would be one way about it. Other ways include a 'newsbox' aside the screen, a dedicated blog page, etc.</marquee>
+    </div>
+    <div id="sm-navbar" style="visibility: hidden">
+        <a href="index.html">Home</a>
+        <a href="community_support.html">Community Support</a>
+        <span>About Us</span>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <main class="aboutusMain">
+        <div class="parallax aboutUsParallaxImg">
             <div id="parallax-text">
                 
-                <h2 class="parallaxTextFadeIn">About Us</h2>
+                <h1 class="parallaxTextFadeIn">About Us</h1>
             </div>
         </div>
         <div id="main-content">
-            <section id="main-sec1">
-                <img src="../images/cars/car1.png" alt="" height="235">
-                <div class="main-text">
-                    <h2>Meet the Team</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
-                </div>
-            </section>
-            <section id="main-sec2">
-                <div class="main-text">
-                    <h1>Club Team Lead</h1>
-                </div>
-                <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                <h6>some guy</h6>
-                <p>brief description</p>
-            </section>
-            <section id="main-sec3">
-                <div class="sec3-col">
-                    <div class="main-text">
-                        <h1>Sub-Team Lead</h1>
+            <div id="team-leads">
+                <h1>Team Leads</h1>
+                <div id="tl-imgs">
+                    <div class="tl">
+                        <img src="../images/team-members/ TESTMEMBER1.jpg" alt="" height="400">
+                        <h3>team lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec3-col">
-                <div class="main-text">
-                        <h1>Sub-Team Lead</h1>
+                    <div class="tl">
+                        <img src="../images/team-members/ TESTMEMBER2.jpg" alt="" height="400">
+                        <h3>team lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec3-col">
-                    <div class="main-text">
-                        <h1>Sub-Team Lead</h1>
+                    <div class="tl">
+                        <img src="../images/team-members/ TESTMEMBER3.jpg" alt="" height="400">
+                        <h3>team lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
                 </div>
-
-            </section>
-            <section id="main-sec4">
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+            </div>
+            <div id="subteam-leads">
+                <h2>Subteam Leads</h2>
+                <div id="stl-imgs">
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-            </section>
-
-            <section id="main-sec5">
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
+                    <div class="tl">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <h3>subteam lead</h3>
+                        <p>(optional) brief description</p>
                     </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
                 </div>
-            </section>
-
-            <section id="main-sec6">
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>The Website Whisperer</h3>
-                    </div>
-                    <img onmouseenter="startSpin(this)" onmouseleave="endSpin(this)" src="../images/team-members/user-me.jpg" alt="" height="200">
-                    <h6>"Neo"</h6>
-                    <p>brief description</p>
-                    <!-- lol -->
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-            </section>
-
-            <section id="main-sec7">
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-                <div class="sec4-col">
-                    <div class="main-text">
-                        <h3>Team Member</h3>
-                    </div>
-                    <img src="../images/team-members/user-normal.jpg" alt="" height="200">
-                    <h6>some guy</h6>
-                    <p>brief description</p>
-                </div>
-
-            </section>
+            </div>
         </div>
+
+        <!-- <div id="main-content" class="aboutusMain">
+                <div id="timeline">
+                    <div>placeholder design</div>
+                    <a href="#main-content">Return to Top</a>
+                    <a href="#team-leads">Team Leads</a>
+                    <a href="#subteam-leads">Subteam Leads</a>
+                    <a href="#2025">2025</a>
+                    <a href="#2024">2024</a>
+                    <a href="#2023">2023</a>
+                    <a href="#2022">2022</a>
+                </div>
+            <div id="timeline-content">
+                <div id="team-leads">
+                    <div>
+                        <h2>Meet the Team</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    </div>
+                    <div id="tl-imgs">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                        <img src="../images/team-members/user-me.jpg" alt="" height="400">
+                        <img src="../images/team-members/user-normal.jpg" alt="" height="400">
+                    </div>
+                </div>
+                <div id="2025">
+                    <div>
+                        <h2>2025</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    </div>    
+                    <img src="../images/cars/car4.png" alt="">
+                </div>
+                <div id="2024">
+                    <div>
+                        <h2>2024</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    </div>    
+                    <img src="../images/cars/car4.png" alt="">
+                </div>
+                <div id="2023">
+                    <div>
+                        <h2>2023</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    </div>    
+                    <img src="../images/cars/car4.png" alt="">
+                </div>
+                <div id="2022">
+                    <div>
+                        <h2>2022</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum ex purus, non scelerisque nisi vulputate eget. Donec ornare pretium metus et elementum. Nunc venenatis ante ut sem rutrum, ut aliquet odio tincidunt. Quisque sed nunc id massa accumsan sodales.</p>
+                    </div>    
+                    <img src="../images/cars/car4.png" alt="">
+                </div>
+            </div>
+        </div> -->
     </main>
     <footer>
         <div>
@@ -254,8 +205,10 @@
         </div>
         
     </footer>
-    <script src="../js/mugshot-flipper.js"></script>
-    <!-- <script src="../js/fade-header.js"></script> -->
-     <!-- <script src="../js/slideshow.js"></script> -->
+    <!-- <script src="../js/mugshot-flipper.js"></script> -->
+    <!-- <script src="../js/slideshow.js"></script> -->
+    <script src="../js/fouc-remedy.js"></script>
+    <script src="../js/SNav.js"></script>
+    <script src="../js/onomatopoeic-click.js"></script>
 </body>
 </html>
