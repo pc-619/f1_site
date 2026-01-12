@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: max-content;
+    /* width: max-content; */
     max-width: 750px;
     margin: 25px auto;
     padding: 10px;
@@ -42,6 +42,7 @@
     & > p {
         width: fit-content;
         margin: 0;
+        font-size:medium;
     }
     & > p > .gradify {
         background-image: linear-gradient(to bottom, #FFCE00 50%, #493705 100%);
@@ -668,6 +669,7 @@ p:not(.tl > *) {
     margin: 30px auto;
     & > * {
         display: flex;
+        width: 100%;
         max-width: 500px;
         margin: 10px auto;
     }
@@ -678,8 +680,11 @@ p:not(.tl > *) {
 
     }
     & > * > input, > * > textarea {
-        width: 430px;
+        width: 100%;
         resize: none;
+    }
+    & > button {
+        max-width: min-content;
     }
 }
 
