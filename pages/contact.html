@@ -54,17 +54,36 @@
     <main>
         <div class="parallax">
             <div id="parallax-text">
-                <h2 class="parallaxTextFadeIn">About Us</h2>
+                <h1 class="parallaxTextFadeIn">Contact</h1>
             </div>
         </div>
         <div id="main-content">
-            hi
+            <div class="notice">
+                <img src="../images/misc/cleanup.svg" alt="" width="64">
+                <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding.<br><br>If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through here.</p>
+            </div>
+
+            <form id="contact-form">
+                <div class="form-name">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="form-email">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required />
+                </div>
+                <div class="form-message">
+                    <label for="message">Message:</label>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </main>
     <footer>
         <div>
             <div id="footer-l">
-                <img src="../images/logos/FE Logo Updated Yellow.png">
+                <img class="logo" src="../images/logos/FE Logo Updated Yellow.png" width="200">
                 <div id="footer-contact-us">
                     <h3>Interested?</h3>
                     <p>Reach out through the form below.<br><br>
@@ -75,20 +94,40 @@
             </div>
             
             <div id="footer-r">
-                <img src="../images/sponsors/sponsor1.png" alt="">
-                <img src="../images/sponsors/sponsor2.png" alt="">
-                <img src="../images/sponsors/sponsor3.png" alt="">
-                <img src="../images/sponsors/sponsor4.png" alt="">
-                <img src="../images/sponsors/sponsor5.png" alt="">
-                <img src="../images/sponsors/sponsor6.png" alt="">
+                <img src="../images/sponsors/CHARGE.png" alt="" width="250">
+                <img src="../images/sponsors/dti-logo-dark_bicolor.svg" alt="" width="250">
+                <img src="../images/sponsors/medalogoglow.png" alt="" width="250">
+                <img src="../images/sponsors/enwin.png" alt="" width="250">
+                <img src="../images/sponsors/RLS_black90_CMYK.png" alt="" width="250">
             </div>
 
         </div>
-        
     </footer>
     <!-- <script src="../js/slideshow.js"></script> -->
     <script src="../js/fouc-remedy.js"></script>
     <script src="../js/SNav.js"></script>
     <script src="../js/onomatopoeic-click.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function () {
+        emailjs.init("7GKdlbtpZi7dMQYaX");
+    })();
+    </script>
+    <script>
+    document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_scyo42q",
+            "template_4xau5jo",
+            this
+        ).then(
+            () => alert("Message sent!"),
+            (error) => alert("Failed: " + error.text)
+        );
+        });
+    </script>
 </body>
 </html>

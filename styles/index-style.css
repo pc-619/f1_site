@@ -11,7 +11,55 @@
  * AUGMENTED UWIN COLOR SCHEME: 
  * NAVY BLUE:
  * #29226D
+ * 
+ * DAVY BLUE:
+ * #18115C88
  */
+
+/* FOR GENERAL USE: */
+.notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 10px;
+    background-color: var(--auwin-davy);
+    border: 2px solid var(--uwin-yellow);
+    border-radius: 10px;
+    & > * {
+        padding: 15px;
+    }
+    & > img {
+        align-self: flex-start;
+        width: 64px !important;
+        height: 64px !important;
+        padding: 15px 0 15px 5px;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    & > p {
+        width: fit-content;
+        margin: 0;
+    }
+    & > p > .gradify {
+        background-image: linear-gradient(to bottom, #FFCE00 50%, #493705 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-weight: bolder;
+    }
+    & a {
+        color: #FFCE00;
+        text-decoration: none;
+    }
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
 
 :root {
     --uwin-blue: #005596;
@@ -611,23 +659,68 @@ p:not(.tl > *) {
     background-position: bottom;
 }
 
+/* CONTACT US */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+    & > * {
+        display: flex;
+        max-width: 500px;
+        margin: 10px auto;
+    }
+    & > * > label {
+        display: flex;
+        align-items: center;
+        width: 70px;
+
+    }
+    & > * > input, > * > textarea {
+        width: 430px;
+        resize: none;
+    }
+}
+
 #plat-sponsors > .sponsor-imgs {
-    background-color: #dee7e4;
+    background-color: #dee7e411;
     border: 1px solid #333;
-    
+    transition: background-color .4s ease;
+}
+#plat-sponsors > .sponsor-imgs:hover {
+    background-color: #dee7e455;
 }
 
 #gold-sponsors > .sponsor-imgs {
-    background-color: goldenrod;
+    background-color: #daa52011;
+    border: 1px solid #333;
+    transition: background-color .4s ease;
 }
+#gold-sponsors > .sponsor-imgs:hover {
+    background-color: #daa52055;
+}
+
 
 #silv-sponsors > .sponsor-imgs {
-    background-color: silver;
+    background-color: #c0c0c011;
+    border: 1px solid #333;
+    transition: background-color .4s ease;
+}
+#silv-sponsors > .sponsor-imgs:hover {
+    background-color: #c0c0c055;
 }
 
+
 #bron-sponsors > .sponsor-imgs {
-    background-color: #714b29;
+    background-color: #714b2911;
+    border: 1px solid #333;
+    transition: background-color .4s ease;
 }
+#bron-sponsors > .sponsor-imgs:hover {
+    background-color: #714b2955;
+}
+
 
 .sponsor-content {
     & > h1 {
@@ -654,6 +747,11 @@ p:not(.tl > *) {
         object-fit: scale-down;
         height: auto;
         margin: 2vw;
+        transition: max-height .5s ease;
+    }
+    & > img:hover {
+        /* width: 90%; */
+        max-height: 160px;
     }
 }
 
