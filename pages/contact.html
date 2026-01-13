@@ -58,25 +58,32 @@
             </div>
         </div>
         <div id="main-content">
-            <div class="notice">
-                <img src="../images/misc/cleanup.svg" alt="" width="64">
-                <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding.<br><br>If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through here.</p>
-            </div>
-
-            <form id="contact-form">
-                <div class="form-name">
-                    <label for="name">Name:</label>
-                    <input id="name" type="text" name="name" required />
+            <div class="notice fadeIn">
+                <div class="notice-icon">
+                    <img src="../images/misc/cleanup.svg" alt="" width="64">
+                    <p class="notice-version">v0.8</p>
                 </div>
-                <div class="form-email">
+                <div class="notice-content">
+                <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding.<br><br>If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through <a id="notice-anchor" href="#contact-form">here</a>.</p>
+                </div>
+                <div class="notice-button">
+                    <button id="notice-button" class="button">I understand</button>
+                </div>
+            </div>
+            <form id="contact-form">
+                <div class="form-component form-name">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" maxlength="20" required />
+                </div>
+                <div class="form-component form-email">
                     <label for="email">Email:</label>
                     <input id="email" type="email" name="email" required />
                 </div>
-                <div class="form-message">
+                <div class="form-component form-message">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit">Send</button>
+                <button class="button" type="submit">Send</button>
             </form>
         </div>
     </main>
@@ -129,5 +136,6 @@
         );
         });
     </script>
+    <script src="../js/notice.js"></script>
 </body>
 </html>

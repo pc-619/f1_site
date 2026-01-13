@@ -56,9 +56,21 @@
             </div>
         </div>
         <div id="main-content">
-            <div class="notice">
+            <!-- <div class="notice">
                 <img src="../images/misc/cleanup.svg" alt="" width="64">
-                <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding.<br><br>If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through <a href="contact.html">the contact form</a>.</p>
+                <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding. If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through <a href="contact.html">the contact form</a>.</p>
+            </div> -->
+            <div class="notice">
+                <div class="notice-icon">
+                    <img src="../images/misc/cleanup.svg" alt="" width="64">
+                    <p class="notice-version">v0.8</p>
+                </div>
+                <div class="notice-content">
+                    <p><span class="gradify">NOTICE:</span> This page is not representative of the final product. As such, anything seen here may be subject to change. Thanks for understanding. If there's anything in particular that strikes you as tasteful or tacky, please shoot me an e-mail through <a href="contact.html">the contact form</a>.</p>
+                </div>
+                <div class="notice-button">
+                    <button class="button" onclick="hideNotice()">I understand</button>
+                </div>
             </div>
             <section id="index-sec1">
                 <img src="../images/media/image-20250928-153641-3e5cd698.jpeg" alt="">
@@ -149,5 +161,6 @@
     <script src="../js/fouc-remedy.js"></script>
     <script src="../js/SNav.js"></script>
     <script src="../js/onomatopoeic-click.js"></script>
+    <script src="../js/notice.js"></script>
 </body>
 </html>
