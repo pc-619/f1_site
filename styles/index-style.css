@@ -135,7 +135,7 @@ body {
     flex-direction: column;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 
     & > header, nav, footer {
         display: flex;
