@@ -17,6 +17,69 @@
  */
 
 /* FOR GENERAL USE: */
+#version-screen {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2227;
+    transition: opacity 1s ease;
+    & #version-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        min-width: 300px;
+        width: 40vw;
+        margin: 5vh 5vw;
+        padding: 2vh 2vw;
+        background-color: var(--auwin-navy);
+        background-image: linear-gradient(to bottom, var(--auwin-navy), #18115C);
+        border: 4px solid var(--uwin-yellow);
+        border-radius: 15px;
+        & #version-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        & h1, h2, h6, p, li {
+            margin: 0 auto 0 0;
+            font-weight: 0;
+        }
+        & h1 {
+            color: var(--uwin-yellow);
+            font-size: 40px;
+            margin: 0 auto;
+        }
+        & h2 {
+            color: var(--uwin-yellow);
+            text-align: left;
+            margin: 0 auto 0 0;
+        }
+        & h6 {
+            font-size: 16px;
+            font-weight: 100;
+            margin: 0 auto;
+        }
+        & ul {
+            margin: 0 auto 10px 0;
+        }
+        & .square {
+            display: flex;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 2px outset #980;
+            border-radius: 3px;
+            background-color: var(--uwin-yellow);
+        }
+    }
+}
 .notice {
     position: fixed;
     z-index: 13;
@@ -58,6 +121,16 @@
     & > .notice-button {
         grid-area: 2 / 5 / 3 / 6;
     }
+    & > .notice-checkbox {
+        display: flex;
+        align-items: center;
+        grid-area: 2 / 2 / 3 / 5;
+        margin: auto 10px auto auto;
+        /* float: right; */
+        & > input {
+            margin-right: 5px;
+        }
+    }
     & > * {
         /* padding: 15px; */
     }
@@ -95,6 +168,38 @@
         margin: auto 0 0 auto;
     }
 }
+
+#version-button {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    opacity: 0;
+    transition: opacity 1s ease;
+    & > button {
+        width: 50px;
+        height: 50px;
+        background-color: var(--auwin-navy);
+        border: 2px solid #224;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 900;
+        transition: border-color .3s ease, background-color .3s ease, color .3s ease, rotate .3s ease;
+        /* transform: rotateY('90'); */
+    }
+    & > button:hover {
+        color: #FFCE00;
+        background-color: #302685;
+        border-color: #335;
+        rotate: 360deg;
+    }
+    & > button:active {
+        border-color: #113;
+        background-color: #18115C;
+        color: #ebbc00;
+    }
+}
+
 .learn-more-button, .button {
     width: 100px;
     color: #000;
@@ -120,6 +225,12 @@
 
 * {
     font-family: 'Bahnschrift';
+}
+
+*:focus {
+    outline: 2px solid #FFCE0088;
+    outline-offset: 2px;
+    border-radius: 3px;
 }
 
 h2 {
@@ -396,7 +507,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    width: 40% !important;
+    width: 40vw !important;
     /* height: 100%; */
     margin: 20px !important;
     text-align: center;
@@ -457,13 +568,14 @@ main {
         width: 100%;
         height: 100%;
         border-radius: inherit;
-        background-color: var(--uwin-yellow) !important;
+        background: #FFFF55;
+        background: radial-gradient(circle at 25% 25%,rgba(255, 255, 85, 1) 0%, rgba(255, 206, 0, 1) 25%, rgba(205, 156, 0, 1) 100%);
+        /* background-color: var(--uwin-yellow) !important; */
         opacity: 0;
         transition: opacity 0.4s ease-in-out;
     }
 }
 .activedot {
-
     & > * {
         opacity: 1;
     }
@@ -489,6 +601,28 @@ main {
     }
     & > *:hover {
         opacity: 1;
+    }
+}
+
+#slideshow-captions {
+    position: absolute;
+    bottom: 50px;
+    left: 2vw;
+    right: 2vw;
+    /* width: 90%; */
+    & > * {
+        padding: 0 0 0 0vw;
+        background-color: #0008;
+        box-shadow: 0px 0px 20px 25px #0008;
+        border: 0;
+    }
+    & > * > * {
+        margin: 0;
+    }
+    & > * > h1 {
+        color: var(--uwin-yellow);
+        text-shadow: 2px 2px 0px #000A;
+        text-align: left;
     }
 }
 
@@ -656,6 +790,7 @@ footer {
     /* border-bottom: 2px solid #CCC; */
     & > h1, h2 {
         font-size: 56px;
+        color: var(--uwin-yellow);
     }
     & > h2 {
         /* font-size: 40px; */
