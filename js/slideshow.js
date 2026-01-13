@@ -93,6 +93,7 @@
 
 const dots = document.getElementsByClassName("slideshow-dot");
 const imgs = document.getElementsByClassName("slideshowImgs");
+const caps = document.getElementsByClassName("slideshow-caption");
 const slideshow = document.getElementById("slideshow-media");
 
 var autoSlide = setInterval(() => {
@@ -126,6 +127,10 @@ function slide(num) {
     let nextImg = activeImg.nextElementSibling;
     let prevImg = activeImg.previousElementSibling;
 
+    let activeCap = document.getElementsByClassName("activecap")[0];
+    let nextCap = activeCap.nextElementSibling;
+    let prevCap = activeCap.previousElementSibling;
+
     // slide right
     if (num === 1 && nextDot) {
         console.log("right, haven't reached end of slideshow");
@@ -133,12 +138,11 @@ function slide(num) {
         activeDot.classList.remove("activedot");
         nextDot.classList.add("activedot");
         // hide old img, display new img
-        // activeImg.classList.add("fadeOut");
         activeImg.classList.remove("ssCurrent");
-        // setTimeout(() => {
-        //     activeImg.classList.remove("ssCurrent");
-        // }, 500);
         nextImg.classList.add("ssCurrent");
+        // hide old cap, display new cap
+        activeCap.classList.remove("activecap");
+        nextCap.classList.add("activecap");
 
     }
     else if (num === 1 && !nextDot) {
@@ -149,7 +153,9 @@ function slide(num) {
         // hide old img, display new img
         activeImg.classList.remove("ssCurrent");
         imgs[0].classList.add("ssCurrent");
-
+        // hide old cap, display new cap
+        activeCap.classList.remove("activecap");
+        caps[0].classList.add("activecap")
     }
 
     // slide left
@@ -161,6 +167,9 @@ function slide(num) {
         // hide old img, display new img
         activeImg.classList.remove("ssCurrent");
         prevImg.classList.add("ssCurrent");
+        // hide old cap, display new cap
+        activeCap.classList.remove("activecap");
+        prevCap.classList.add("activecap");
 
     }
     else if (num === -1 && !prevDot) {
@@ -171,6 +180,9 @@ function slide(num) {
         // hide old img, display new img
         activeImg.classList.remove("ssCurrent");
         imgs[imgs.length - 1].classList.add("ssCurrent");
+        // hide old cap, display new cap
+        activeCap.classList.remove("activecap");
+        caps[caps.length - 1].classList.add("activecap");
     }
 
 

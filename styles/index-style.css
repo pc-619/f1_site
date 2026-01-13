@@ -186,31 +186,31 @@
 #version-button {
     position: fixed;
     bottom: 2vw;
-    right: 2vw;
+    left: 2vw;
     opacity: 0;
     transition: opacity 1s ease;
     & > button {
         width: 50px;
         height: 50px;
-        background-color: var(--auwin-navy);
+        background-color: #302685;
         border: 2px solid #224;
         border-radius: 50%;
-        color: #fff;
+        color: #FFCE00;
         font-size: 20px;
         font-weight: 900;
         transition: border-color .3s ease, background-color .3s ease, color .3s ease, rotate .3s ease;
         /* transform: rotateY('90'); */
     }
     & > button:hover {
-        color: #FFCE00;
-        background-color: #302685;
+        color: #ebbc00;
+        background-color: var(--auwin-navy);
         border-color: #335;
         rotate: 360deg;
     }
     & > button:active {
         border-color: #113;
         background-color: #18115C;
-        color: #ebbc00;
+        color: #fff;
     }
 }
 
@@ -622,20 +622,24 @@ main {
     position: absolute;
     bottom: 50px;
     left: 2vw;
-    right: 2vw;
-    /* width: 90%; */
+    right: 4vw;
+    width: fit-content;
     & > * {
+        display: none;
         padding: 0 0 0 0vw;
         background-color: #0008;
         box-shadow: 0px 0px 20px 25px #0008;
         border: 0;
     }
+    & > .activecap {
+        display: block;
+    }
     & > * > * {
         margin: 0;
+        text-shadow: 2px 2px 0px #000A;
     }
     & > * > h1 {
         color: var(--uwin-yellow);
-        text-shadow: 2px 2px 0px #000A;
         text-align: left;
     }
 }

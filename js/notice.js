@@ -14,7 +14,7 @@ if (localStorage.getItem("hasSeenNotice") === "true") {
     setTimeout(() => {
         versionBtn.style.opacity = 1;
         console.log("revealed version button");
-    }, 3000);
+    }, 1000);
 }
 else {
     notice.style.display = "grid";
@@ -35,7 +35,7 @@ else {
         setTimeout(() => {
             versionBtn.style.opacity = 1;
             console.log("revealed version button");
-        }, 3000);
+        }, 1000);
     });
 }
 

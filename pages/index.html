@@ -60,7 +60,7 @@
                 <div id="version-info">
                     <div id="version-title">
                         <h1>Version Info</h1>
-                        <button class="square exit" onclick="hideVersionInfo()"><img src="../images/misc/cross.svg" alt="" width="24"></button>
+                        <button class="square" onclick="hideVersionInfo()"><img src="../images/misc/cross.svg" alt="" width="24"></button>
                     </div>
                     <h6>A quick way about viewing website progress.</h6>
 
@@ -73,6 +73,11 @@
                         </ul>
                         <li>Replace placeholder contact form with final style.</li>
                         <li>Adjust font-sizes to match well with mobile vs. desktop views.</li>
+                        <li>Consider adding alternative vertical layout for sponsors.</li>
+                        <ul>
+                            <li style="color: #f88;">Not mobile-friendly, but reduces whitespace between sponsors.</li>
+                        </ul>
+                        <li>Consider consolidating all JS scripts into one .js file.</li>
                     </ul>
                     <h6>This list is subject to frequent editing -- consider it a "sticky note" for me to jot down things I intend to implement into the site.</h6>
                 </div>
@@ -139,9 +144,17 @@
                         <img class="slideshowImgs" src="../images/media/image-20240612-074607-40de0191.jpeg" alt="">
                         <!-- TODO: Implement text for each slide, and give it the same logic as slideshow-dots on the .js script. -->
                         <div id="slideshow-captions">
-                            <div class="slideshow-caption activecaption">
-                                <h1>Michigan Shootout 2024 diwadwahdiwa</h1>
-                                <p>An example of slides with captions.</p>
+                            <div class="slideshow-caption activecap">
+                                <h1>An example of...</h1>
+                                <p>...slides with captions.</p>
+                            </div>
+                            <div class="slideshow-caption">
+                                <h1>If you like this,</h1>
+                                <p>It'll be implemented.</p>
+                            </div>
+                            <div class="slideshow-caption">
+                                <h1>Of course, there are</h1>
+                                <p>many alternatives.</p>
                             </div>
                         </div>
                         <div id="slideshow-progress">
